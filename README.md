@@ -1,1 +1,1 @@
-Phalcon docker-compose bolireplate
+Phalcon docker-compose boilerplate.
