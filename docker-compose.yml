@@ -4,7 +4,7 @@ services:
         image: mysql:5.7.22
         restart: always
         ports:
-          - "3307:3306"
+          - "3305:3306"
         environment:
           - MYSQL_DATABASE=core_db
           - MYSQL_USER=root
@@ -17,7 +17,7 @@ services:
         image: adminer
         restart: always
         ports:
-          - "3308:8080"
+          - "3306:8080"
         depends_on:
           - my-db
           
@@ -25,7 +25,7 @@ services:
         build: ./app
         restart: always
         ports:
-          - "8080:80"
+          - "3307:80"
         volumes:
           - "./logs/nginx:/var/log/nginx"
           - "./app/src:/var/www/public"
